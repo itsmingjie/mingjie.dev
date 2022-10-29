@@ -4,6 +4,7 @@ import { Archivo } from "@next/font/google";
 import type { PropsWithChildren } from "react";
 
 import { clsx } from "@/lib/utils/clsx";
+import { Sidebar } from "@/ui/menu";
 
 const archivo = Archivo({
   variable: "--archivo-font",
@@ -13,9 +14,18 @@ const archivo = Archivo({
 
 const RootLayout = ({ children }: PropsWithChildren): JSX.Element => {
   return (
-    <html className={clsx(archivo.variable)}>
+    <html className={clsx("h-full", archivo.variable)}>
       <head />
-      <body>{children}</body>
+
+      <body className="relative flex items-stretch h-full gap-1">
+        <aside className="flex-none order-1 w-56 p-2">
+          <Sidebar />
+        </aside>
+
+        <main className="relative order-2 w-full p-8 m-2 overflow-auto border rounded-md bg-light/5 border-hint/50 backdrop-blur-sm shadow-black">
+          {children}
+        </main>
+      </body>
     </html>
   );
 };

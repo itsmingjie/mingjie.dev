@@ -5,7 +5,8 @@
     "baseUrl": ".",
     "paths": {
       "@/lib/*": ["lib/*"],
-      "@/styles/*": ["styles/*"]
+      "@/styles/*": ["styles/*"],
+      "@/ui/*": ["ui/*"]
     },
     "plugins": [
       {

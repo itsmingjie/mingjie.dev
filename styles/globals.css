@@ -1,3 +1,5 @@
+@config "../tailwind.config.js";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -23,7 +25,7 @@ a {
   }
 
   body {
-    color: white;
-    background: black;
+    color: theme("colors.light");
+    background: theme("colors.dark");
   }
 }
