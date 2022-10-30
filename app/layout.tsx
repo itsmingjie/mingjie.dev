@@ -23,7 +23,7 @@ const RootLayout = ({ children }: PropsWithChildren): JSX.Element => {
           <Sidebar />
         </aside>
 
-        <main className="relative order-2 w-full p-8 m-2 overflow-auto border rounded-md bg-light/5 border-hint/50 backdrop-blur-sm shadow-black">
+        <main className="relative order-2 w-full px-20 pt-16 m-2 overflow-auto border rounded-md bg-light/5 border-hint/50 backdrop-blur-sm shadow-black">
           {children}
 
           <AnalyticsWrapper />

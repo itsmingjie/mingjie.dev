@@ -1,32 +1,27 @@
+import { Construction } from "@/ui/construction";
 import { Link } from "@/ui/link";
 
 const Page = (): JSX.Element => {
   return (
-    <div className="flex flex-col gap-4">
-      <div className="flex flex-col gap-2 text-sm text-light/50">
-        <p>
-          Learner & builder, crafting interactive education experiences for kids
-          at{" "}
+    <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-2">
+        <h1 className="text-4xl font-medium">Heyo!</h1>
+        <p className="max-w-md text-xs font-light leading-5 tracking-wide text-light/80">
+          I'm currently rebuilding my website, so things might look empty or
+          broken around here. If you're interested in the progress, you can find
+          the source code on{" "}
           <Link
-            href="https://joinender.com"
-            className="hover:underline"
+            href="https://github.com/itsmingjie/mingjie.dev"
             external
+            className="hover:underline text-light"
           >
-            Ender
+            GitHub
           </Link>
           .
         </p>
-        <p>
-          I grew up in Shanghai, immigrated to Maryland, and went to UC Berkeley
-          for a little over a year. I now live in Austin, a weird yet beautiful,
-          diverse, and fast-growing city.
-        </p>
-        <p>
-          I spent a few years working at CS education nonprofits like Hack Club,
-          CodeDay, and eventually cofounded my own initiative Execute Big. I
-          enjoy teaching, building, and doing research about education.
-        </p>
       </div>
+
+      <Construction />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 const Head = (): JSX.Element => {
   return (
     <>
-      <title>mingjie &rsaquo; ~</title>
+      <title key="head-title">mingjie &rsaquo; ~</title>
     </>
   );
 };
