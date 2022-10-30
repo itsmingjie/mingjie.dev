@@ -11,8 +11,10 @@ export const Sidebar = (): JSX.Element => {
       <div className="flex flex-col gap-2">
         <MenuHeader />
 
+        <MenuDivider title="Collections" />
+
         <ul className="flex flex-col gap-1">
-          <MenuItem href="/goods" icon={<MapPin size={16} />}>
+          <MenuItem href="/places" icon={<MapPin size={16} />}>
             Places
           </MenuItem>
 

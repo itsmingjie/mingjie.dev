@@ -25,43 +25,42 @@ export const MenuHeader = (): JSX.Element => {
   };
 
   return (
-    <Link href="/">
-      <div className="flex items-center justify-between pb-2 pl-4 group">
-        <div className="grow">
-          <AnimatePresence mode="wait" initial={false}>
-            {isEnglish ? (
-              <motion.h1
-                key={`${motionPrefix}-en`}
-                className="text-lg font-medium tracking-wide"
-                variants={animateVariants}
-                initial="initial"
-                animate="animate"
-                exit="exit"
-              >
-                Mingjie Jiang
-              </motion.h1>
-            ) : (
-              <motion.h1
-                key={`${motionPrefix}-zh}`}
-                className="text-lg font-medium tracking-widest"
-                variants={animateVariants}
-                initial="initial"
-                animate="animate"
-                exit="exit"
-              >
-                姜明劼
-              </motion.h1>
-            )}
-          </AnimatePresence>
-        </div>
+    <div className="flex items-center justify-between pb-2 pl-4 group gap-0.5">
+      <Link href="/" className="grow">
+        <AnimatePresence mode="wait" initial={false}>
+          {isEnglish ? (
+            <motion.h1
+              key={`${motionPrefix}-en`}
+              className="text-lg font-medium tracking-wide"
+              variants={animateVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+            >
+              Mingjie Jiang
+            </motion.h1>
+          ) : (
+            <motion.h1
+              key={`${motionPrefix}-zh}`}
+              className="text-lg font-medium tracking-widest"
+              variants={animateVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+            >
+              姜明劼
+            </motion.h1>
+          )}
+        </AnimatePresence>
+      </Link>
 
-        <div
-          className="transition-opacity opacity-0 text-hint/50 group-hover:opacity-100"
-          onClick={() => setIsEnglish(!isEnglish)}
-        >
-          <Repeat size={16} />
-        </div>
-      </div>
-    </Link>
+      <motion.button
+        className="opacity-0 text-hint/50 group-hover:opacity-100"
+        whileTap={{ scale: 0.8 }}
+        onTapStart={() => setIsEnglish(!isEnglish)}
+      >
+        <Repeat size={16} />
+      </motion.button>
+    </div>
   );
 };
