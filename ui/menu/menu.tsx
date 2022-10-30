@@ -1,12 +1,12 @@
 import { Github, MapPin, Tag, Twitter } from "lucide-react";
 
+import { ROUTES } from "@/lib/constants";
 import { Link } from "@/ui/link";
 
 import { MenuDivider } from "./menu-divider";
 import { MenuFooter } from "./menu-footer";
 import { MenuHeader } from "./menu-header";
 import { MenuItem } from "./menu-item";
-import { ROUTES } from "@/lib/constants";
 
 export const Sidebar = (): JSX.Element => {
   return (
