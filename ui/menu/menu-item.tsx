@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 import { Link } from "@/ui/link";
 
 interface MenuItemProps {
@@ -17,7 +21,10 @@ export const MenuItem = ({
 }: MenuItemProps): JSX.Element => {
   const StyledMenuItem = (): JSX.Element => {
     return (
-      <li className="flex items-center h-10 gap-2 px-4 py-2 text-xs tracking-wide transition-colors rounded-lg group hover:bg-light/10 text-light/60 hover:text-light">
+      <motion.li
+        className="flex items-center h-10 gap-2 px-4 py-2 text-xs tracking-wide transition-colors rounded-lg group hover:bg-light/10 text-light/60 hover:text-light"
+        whileTap={{ scale: 0.97 }}
+      >
         {icon}
         {children}
 
@@ -26,7 +33,7 @@ export const MenuItem = ({
             {hint}
           </span>
         )}
-      </li>
+      </motion.li>
     );
   };
 
