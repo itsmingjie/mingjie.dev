@@ -1,5 +1,7 @@
 import { Github, MapPin, Tag, Twitter } from "lucide-react";
 
+import { Link } from "@/ui/link";
+
 import { MenuDivider } from "./menu-divider";
 import { MenuFooter } from "./menu-footer";
 import { MenuHeader } from "./menu-header";
@@ -46,7 +48,31 @@ export const Sidebar = (): JSX.Element => {
         </ul>
       </div>
 
-      <MenuFooter />
+      <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 px-3 py-2 text-xs border rounded-md bg-light/5 border-hint/50 backdrop-blur-sm shadow-black">
+          <h1 className="font-semibold text-light">🚜 Ongoing Construction</h1>
+          <p className="text-light/80">
+            This website is a work in progress&ndash; I built it mostly as a
+            playground for{" "}
+            <Link
+              href="https://nextjs.org/13"
+              className="text-light hover:underline"
+              external
+            >
+              Next.js 13
+            </Link>
+            .{" "}
+            <Link
+              href="https://mingjie.notion.site/Next-js-13-First-Look-2f1ae31442784ea3b8aa54c0f68b2734"
+              className="text-light hover:underline"
+              external
+            >
+              Read my writeup &rarr;
+            </Link>
+          </p>
+        </div>
+        <MenuFooter />
+      </div>
     </nav>
   );
 };

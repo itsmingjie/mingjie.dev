@@ -9,7 +9,7 @@ const Page = (): JSX.Element => {
           at{" "}
           <Link
             href="https://joinender.com"
-            className="underline transition-colors hover:text-light/90"
+            className="hover:underline"
             external
           >
             Ender
