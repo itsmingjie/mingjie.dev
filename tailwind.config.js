@@ -1,6 +1,66 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require("tailwindcss/defaultTheme");
 
+const typographyThemes = (theme) => ({
+  n: {
+    css: {
+      maxWidth: "none",
+      paddingBottom: theme("spacing.24"),
+
+      "*": {
+        marginTop: 0,
+        marginBottom: 0,
+      },
+
+      color: theme("colors.light/50"),
+
+      pre: {
+        backgroundColor: theme("colors.dark"),
+      },
+
+      "h1, h2, h3, h4, h5, h6": {
+        fontWeight: theme("fontWeight.semibold"),
+        marginTop: theme("spacing.4"),
+      },
+
+      h1: {
+        fontSize: theme("fontSize.2xl"),
+      },
+
+      h2: {
+        fontSize: theme("fontSize.xl"),
+      },
+
+      h3: {
+        fontSize: theme("fontSize.lg"),
+      },
+
+      "h4, h4, h5": {
+        fontSize: theme("fontSize.base"),
+      },
+
+      a: {
+        color: theme("colors.light"),
+        fontWeight: theme("fontWeight.medium"),
+        textDecoration: "underline",
+      },
+
+      "--tw-prose-body": theme("colors.light"),
+      "--tw-prose-headings": theme("colors.light"),
+      "--tw-prose-code": theme("colors.light"),
+
+      ":not(pre) > code": {
+        backgroundColor: theme("colors.dark"),
+        padding: "0.2em 0.4em",
+        borderRadius: theme("borderRadius.md"),
+        "&::before, &::after": {
+          content: "none",
+        },
+      },
+    },
+  },
+});
+
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
@@ -40,7 +100,8 @@ module.exports = {
       gridTemplateColumns: {
         "fill-3": "repeat(auto-fill, minmax(396px, 3fr))",
       },
+      typography: typographyThemes,
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };

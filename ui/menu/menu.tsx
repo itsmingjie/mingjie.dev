@@ -6,6 +6,7 @@ import { MenuDivider } from "./menu-divider";
 import { MenuFooter } from "./menu-footer";
 import { MenuHeader } from "./menu-header";
 import { MenuItem } from "./menu-item";
+import { ROUTES } from "@/lib/constants";
 
 export const Sidebar = (): JSX.Element => {
   return (
@@ -62,11 +63,7 @@ export const Sidebar = (): JSX.Element => {
               Next.js 13
             </Link>
             .{" "}
-            <Link
-              href="https://mingjie.notion.site/Next-js-13-First-Look-2f1ae31442784ea3b8aa54c0f68b2734"
-              className="text-light hover:underline"
-              external
-            >
+            <Link href={ROUTES.writeup} className="text-light hover:underline">
               Read my writeup &rarr;
             </Link>
           </p>
