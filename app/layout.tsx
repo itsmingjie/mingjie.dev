@@ -5,6 +5,7 @@ import type { PropsWithChildren } from "react";
 
 import { clsx } from "@/lib/utils/clsx";
 import { Sidebar } from "@/ui/menu";
+import { AnalyticsWrapper } from "@/ui/utilities/analytics";
 
 const archivo = Archivo({
   variable: "--archivo-font",
@@ -24,6 +25,8 @@ const RootLayout = ({ children }: PropsWithChildren): JSX.Element => {
 
         <main className="relative order-2 w-full p-8 m-2 overflow-auto border rounded-md bg-light/5 border-hint/50 backdrop-blur-sm shadow-black">
           {children}
+
+          <AnalyticsWrapper />
         </main>
       </body>
     </html>
