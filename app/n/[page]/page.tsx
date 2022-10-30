@@ -17,17 +17,15 @@ const NPage = async ({ params }: NPageProps): Promise<JSX.Element> => {
   const mdString = n2m.toMarkdownString(pageData);
 
   return (
-    <div className="flex justify-center">
-      <div className="relative flex flex-col w-full max-w-2xl gap-6">
-        <h1 className="text-3xl font-bold">
-          {
-            // @ts-expect-error - pageProps is not typed
-            pageProps.properties.title?.title[0].plain_text as string
-          }
-        </h1>
-        <Markdown>{mdString}</Markdown>
-      </div>
-    </div>
+    <>
+      <h1 className="text-3xl font-bold">
+        {
+          // @ts-expect-error - pageProps is not typed
+          pageProps.properties.title?.title[0].plain_text as string
+        }
+      </h1>
+      <Markdown>{mdString}</Markdown>
+    </>
   );
 };
 

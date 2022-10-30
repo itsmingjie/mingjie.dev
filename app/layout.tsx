@@ -16,10 +16,8 @@ const archivo = Archivo({
 const RootLayout = ({ children }: PropsWithChildren): JSX.Element => {
   return (
     <html className={clsx("h-full", archivo.variable)}>
-      <head />
-
       <body className="relative flex items-stretch h-full gap-1">
-        <aside className="flex-none order-1 w-56 p-2">
+        <aside className="flex-none order-1 hidden w-0 p-2 md:w-56 md:block">
           <Sidebar />
         </aside>
 
