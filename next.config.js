@@ -6,6 +6,14 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "r2.mingjie.dev",
+      },
+    ],
+  },
 };
 
 module.exports = nextConfig;

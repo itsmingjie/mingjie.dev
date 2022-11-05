@@ -21,8 +21,8 @@ export const Sidebar = (): JSX.Element => {
             Places
           </MenuItem>
 
-          <MenuItem href="/goods" icon={<Tag size={16} />}>
-            Goods
+          <MenuItem href="/things" icon={<Tag size={16} />}>
+            Things
           </MenuItem>
         </ul>
 
