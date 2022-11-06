@@ -12,6 +12,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "r2.mingjie.dev",
       },
+      {
+        protocol: "https",
+        hostname: "i.scdn.co",
+      },
     ],
   },
 };

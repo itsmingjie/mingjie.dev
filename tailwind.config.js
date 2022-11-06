@@ -77,6 +77,7 @@ module.exports = {
       pink: "#EB5673",
       purple: "#A280E8",
       black: "#000000",
+      transparent: "transparent",
     },
     letterSpacing: {
       tightest: "-.06em",
