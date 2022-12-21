@@ -1,4 +1,4 @@
-import { Github, MapPin, Tag, Twitter } from "lucide-react";
+import { Cloud, Github, MapPin, Tag } from "lucide-react";
 
 import { ROUTES } from "@/lib/constants";
 import { Link } from "@/ui/link";
@@ -40,13 +40,18 @@ export const Sidebar = (): JSX.Element => {
           </MenuItem>
 
           <MenuItem
-            href="https://twitter.com/itsmingjie"
-            icon={<Twitter size={16} />}
+            href="https://tea.codes/@itsmingjie"
+            icon={<Cloud size={16} />}
             hint="@itsmingjie"
             external
           >
-            Twitter
+            Mastodon
           </MenuItem>
+
+          {/* hidden link for verification */}
+          <a rel="me" href="https://tea.codes/@itsmingjie" className="hidden">
+            Mastodon
+          </a>
         </ul>
       </div>
 
